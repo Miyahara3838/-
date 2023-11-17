@@ -15,7 +15,14 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
+            $table->string('facility_name',20);
+            $table->tinyInteger('good')->nullable();
+            $table->string('temperature',20)->nullable();
+            $table->string('outside_air',50)->nullable();
+            $table->string('meal',50)->nullable();
+            $table->text('other')->nullable();
             $table->timestamps();
+            
         });
     }
 
