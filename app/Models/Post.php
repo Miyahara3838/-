@@ -10,12 +10,12 @@ class Post extends Model
     use HasFactory;
     
     protected $fillable =[
-    'facility_name',
-    'good',
-    'temperature',
-    'outside_air',
-    'meal',
-    'other',
+        'facility_name',
+        'good',
+        'temperature',
+        'outside_air',
+        'meal',
+        'other',
     ];
     
     public function getPaginateBylimit(int $limit_count = 5)

@@ -40,7 +40,7 @@
             </div>
             <div class="other">
                 <h2>その他</h2>
-                <textarea name="post[other]" placeholder="良かったところ、改善点等" ></textarea>
+                <textarea name="post[other]" placeholder="良かったところ、改善点等" >{{ old('post.other') }}</textarea>
                 <p class="other_error">{{ $errors->first('post.other') }}</p>
             </div>
             <input type="submit" value="投稿"/>

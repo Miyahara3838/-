@@ -9,12 +9,12 @@ class PostRequest extends FormRequest
     public function rules()
     {
         return [
-            'post.facility_name' => 'required|string|max50',
-            'post.good' => 'required|string|max5',
-            'post.temperature' => 'required|string|max100',
-            'post.outside_air' => 'required|string|max100',
-            'post.meal' => 'required|string|max100',
-            'post.other' => 'required|string|max200',
+            'post.facility_name' => 'required|string|max:50',
+            // 'post.good' => 'required|string|max:5',
+            'post.temperature' => 'required|string|max:100',
+            'post.outside_air' => 'required|string|max:100',
+            'post.meal' => 'required|string|max:100',
+            'post.other' => 'required|string|max:200',
         ];
     }
 }
