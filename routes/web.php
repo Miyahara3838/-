@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\FollowController;
 use Illuminate\Support\Facades\Route;
+
 
 
 
@@ -34,9 +36,12 @@ Route::controller(PostController::class)->middleware(['auth'])->group(function()
     Route::get('/posts/{post}/edit', [PostController::class,'edit'])->name('edit');
     Route::put('/posts/{post}', [PostController::class, 'update'])->name('update');
     Route::delete('/posts/{post}',[PostController::class,'delete'])->name('delete');
+    
 });
 
-
+Route::get('/users',[ProfileController::class,'user'])->name('index');
+// Route::post('/following',[FollowingController::class,'store']);
+// Route::get('/users/following',[FollowingController::class,'following_index']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
