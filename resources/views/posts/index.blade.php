@@ -17,7 +17,8 @@
                 投稿一覧
             </x-slot>
             <h1>SAUNA番付</h1>
-            <a href="/posts/posted_creation">新規作成</a>
+            <h2><a href="/users">ユーザー</a></h2>
+            <h2><a href="/posts/posted_creation">新規作成</a></h2>
             <div class="posts">
                 @foreach($posts as $post)
                     <div class="post_list">
